@@ -1,0 +1,39 @@
+﻿@model Product;
+@{
+	ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+
+<form asp-action="Add" asp-controller="Products" method="post">
+	<table class="table table-responsive">
+		<tr>
+			<td><label asp-for="ProductName"></label></td>
+			<td>
+				<input asp-for="ProductName" placeholder="Enter product name" class="form-control" />
+				<span asp-validation-for="ProductName" class="text-danger"></span>
+			</td>
+		</tr>
+		<tr>
+			<td><label asp-for="Price"></label></td>
+			<td><input asp-for="Price" placeholder="Enter product price" class="form-control" /></td>
+		</tr>
+		<tr>
+			<td><label asp-for="Qty"></label></td>
+			<td><input asp-for="Qty" placeholder="Enter product quantity" class="form-control" /></td>
+		</tr>
+		<tr>
+			<td><label asp-for="Description"></label></td>
+			<td>
+				<input asp-for="Description" placeholder="Enter product quantity" class="form-control" />
+				<span asp-validation-for="Description" class="text-danger"></span>
+			</td>
+		</tr>
+	</table>
+	<div class="text-end">
+		<a asp-action="Index" asp-controller="Products" class="btn btn-secondary btn-lg">Cancel</a>
+		<td>
+			<input type="submit" value="Save" class="btn btn-primary btn-lg" />
+		</td>
+	</div>
+</form>

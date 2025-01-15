@@ -1,0 +1,32 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<br>
+<table class="table table-responsive-md">
+	<tr>
+		<td class="fw-bold">@Html.DisplayNameFor(Model => Model.Id)</td>
+		<td>@Model.Id</td>
+	</tr>
+	<tr>
+		<td class="fw-bold">@Html.DisplayNameFor(Model => Model.Name)</td>
+		<td>@Model.Name</td>
+	</tr>
+	<tr>
+		<td class="fw-bold">@Html.DisplayNameFor(Model => Model.Email)</td>
+		<td>@Model.Email</td>
+	</tr>
+	<tr>
+		<td class="fw-bold">@Html.DisplayNameFor(Model => Model.Phone)</td>
+		<td>@Model.Phone</td>
+	</tr>
+	<tr>
+		<td class="fw-bold">@Html.DisplayNameFor(Model => Model.HDate)</td>
+		<td>@Model.HDate</td>
+	</tr>
+</table>
+<div class="text-end">
+	<a asp-action="GetAll" asp-controller="Products" class="btn btn-secondary">Back</a>
+</div>
